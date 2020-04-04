@@ -25,11 +25,7 @@ override_dh_compress:
 		-X.c3d -X.changelog -X.dof -X.path -X.tris
 
 override_dh_auto_test:
-ifeq ($(DEB_HOST_ARCH),i386)
 	true
-else
-	dh_auto_test
-endif
 
 %:
 	dh $@ --buildsystem=cmake --parallel
