@@ -1,3 +1,9 @@
+dart6 (6.10.0~osrf5~2020-04-03~711dde3cb8f4f066f51ab62db94922095e4f8bc8) bionic; urgency=medium
+
+  * Fix testing
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Sat, 04 Apr 2020 17:58:21 +0200
+
 dart6 (6.10.0~osrf4~2020-04-03~711dde3cb8f4f066f51ab62db94922095e4f8bc8) bionic; urgency=medium
 
   * New OSRF testing release
