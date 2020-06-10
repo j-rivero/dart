@@ -1,3 +1,9 @@
+dart6 (6.10.0~osrf6~2020-06-10~da7758ae4b7a388f20ad3a2247cc860eca5c85e4) bionic; urgency=medium
+
+  *  Fix grouping of contact constraints PR
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Wed, 10 Jun 2020 20:43:11 +0200
+
 dart6 (6.10.0~osrf5~2020-04-03~711dde3cb8f4f066f51ab62db94922095e4f8bc8) bionic; urgency=medium
 
   * Fix testing
