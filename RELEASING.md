@@ -21,13 +21,14 @@ packages.osrfoundation.org
 
 ### Tools installation
 
-  * apt-get install -y git-buildpackage dput
+  * `apt-get install -y git-buildpackage dput`
+
 
 ### Configure the releasing fork
 
- * git clone https://github.com/j-rivero/dart
- * git checkout azeey/friction_per_shape_more_params
- * git remote add upstream https://github.com/azeey/dart
+ * `git clone https://github.com/j-rivero/dart`
+ * `git checkout azeey/friction_per_shape_more_params`
+ * `git remote add upstream https://github.com/azeey/dart`
 
 
 ## Releasing 
@@ -35,27 +36,27 @@ packages.osrfoundation.org
 ### Import sources to releasing fork
 
  1. Go to the releasing fork created in prerequisites. Pull current sources:
-  1. git fetch upstream
-  1. git pull upstream azeey/friction_per_shape_more_params
+  1. `git fetch upstream`
+  1. `git pull upstream azeey/friction_per_shape_more_params`
  
  1. Pull sources to debian branch
-  1. git checkout azeey/friction_per_shape_more_params_debian
-  1. git pull . azeey/friction_per_shape_more_params
+  1. `git checkout azeey/friction_per_shape_more_params_debian`
+  1. `git pull . azeey/friction_per_shape_more_params`
 
 ### Update changelog
 
- 1. gbp dch --ignore-branch --no-git-author -D bionic --force-distribution --debian-branch azeey/friction_per_shape_more_params_debian --new-version=6.10.0~osrf6~$(date +%Y-%m-%d)~$(git rev-parse HEAD) --commit-msg 'New OSRF testing release' --commit
+ 1. `gbp dch --ignore-branch --no-git-author -D bionic --force-distribution --debian-branch azeey/friction_per_shape_more_params_debian --new-version=6.10.0~osrf6~$(date +%Y-%m-%d)~$(git rev-parse HEAD) --commit-msg 'New OSRF testing release' --commit`
 
 ### Upload changes in releasing
- 1. git push --all
- 1. git push --tags
+ 1. `git push --all`
+ 1. `git push --tags`
 
 ### Releasing in Ubuntu PPA
  
 #### Generate source package file
 
- 1. gbp buildpackage -S --git-debian-branch=azeey/friction_per_shape_more_params_debian --git-upstream-branch=azeey/friction_per_shape_more_params --git-postbuild=
+ 1. `gbp buildpackage -S --git-debian-branch=azeey/friction_per_shape_more_params_debian --git-upstream-branch=azeey/friction_per_shape_more_params --git-postbuild=`
 
 #### Upload source package to Ubuntu's PPA
 
- 1. dput ppa:j-rivero/dartsim-openrobotics-testing ../dart6_*_source.changes 
+ 1. `dput ppa:j-rivero/dartsim-openrobotics-testing ../dart6_*_source.changes`
