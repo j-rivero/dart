@@ -37,19 +37,19 @@ packages.osrfoundation.org
 
  1. Go to the releasing fork created in prerequisites. Pull current sources:
   1. `git fetch upstream`
-  1. `git pull upstream azeey/friction_per_shape_more_params`
+  1. `git pull upstream azeey/friction_per_shape_more_params` (merge commit will appear)
  
  1. Pull sources to debian branch
   1. `git checkout azeey/friction_per_shape_more_params_debian`
-  1. `git pull . azeey/friction_per_shape_more_params`
+  1. `git pull . azeey/friction_per_shape_more_params` (merge commit will appear)
 
 ### Update changelog
 
- 1. `gbp dch --ignore-branch --no-git-author -D bionic --force-distribution --debian-branch azeey/friction_per_shape_more_params_debian --new-version=6.10.0~osrf6~$(date +%Y-%m-%d)~$(git rev-parse HEAD) --commit-msg 'New OSRF testing release' --commit`
+ 1. `gbp dch --ignore-branch --no-git-author -D bionic --force-distribution --debian-branch azeey/friction_per_shape_more_params_debian --new-version=6.10.0~osrf6~$(date +%Y-%m-%d)~$(git rev-parse HEAD) --commit-msg 'New OSRF testing release' --commit` (check changelog by running `git diff HEAD~1`)
 
 ### Upload changes in releasing
- 1. `git push --all`
- 1. `git push --tags`
+ 1. `git push origin azeey/friction_per_shape_more_params_debian`
+ 1. `git push origin azeey/friction_per_shape_more_params`
 
 ### Releasing in Ubuntu PPA
  
