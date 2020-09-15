@@ -159,6 +159,26 @@ private:
   ///
   TangentBasisMatrix getTangentBasisMatrixODE(const Eigen::Vector3d& n);
 
+  // The following functions for getting and setting slip compliance and
+  // accessing the contact object are meant to be used by ConstraintSolver to
+  // update the slip compliances based on the number of contacts between the
+  // collision objects.
+  //
+  /// Get primary slip compliance
+  double getPrimarySlipCompliance() const;
+
+  /// Set primary slip compliance
+  void setPrimarySlipCompliance(double slip);
+
+  /// Get secondary slip compliance
+  double getSecondarySlipCompliance() const;
+
+  /// Set secondary slip compliance
+  void setSecondarySlipCompliance(double slip);
+
+  /// Get contact object associated witht this constraint
+  const collision::Contact &getContact() const;
+
 private:
   /// Time step
   double mTimeStep;
