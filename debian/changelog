@@ -1,3 +1,26 @@
+dart6 (6.10.0~osrf6~2020-09-16~12cdfb8c2c8f471800666d086c981dd448f0edc3) bionic; urgency=medium
+
+  [ Addisu Taddese ]
+  * Fix grouping of contact constraints (#6)
+
+  [ Steven Peters ]
+  * Support colcon workspace with bullet and ode (#1389)
+
+  [ Addisu Z. Taddese ]
+  * Implement force dependent slip
+  * Non ABI breaking FDS implementation
+  * Make functions private. Add "primary" to function names since that will likely be added when upstreaming
+  * Move where contact counts are incremented
+  * Add tests
+  * Add test with a body with offset COM
+  * Fix velocity and position integration when the COM is offset. Apply fix to constraint updates
+  * Style
+  * Reveiwer feedback
+  * Tighten tolerances
+  * Do not assume order of contact pairs
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Wed, 16 Sep 2020 01:05:45 +0200
+
 dart6 (6.10.0~osrf6~2020-06-10~da7758ae4b7a388f20ad3a2247cc860eca5c85e4) bionic; urgency=medium
 
   *  Fix grouping of contact constraints PR
